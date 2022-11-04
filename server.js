@@ -118,6 +118,15 @@ app.get('/get_posts', async (req, res, next) => {
   }
 })
 
+app.get('/testlink', async (req, res, next) => {
+  try {
+    const data = await db.test();
+    res.send(data);
+  } catch (exception) {
+    console.log(exception);
+  }
+})
+
 app.post('/add_trainer_workout', async (req, res, next) => {
   try {
     const data = await db.add_trainer_workout(req.body);
