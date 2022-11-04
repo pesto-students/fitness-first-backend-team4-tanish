@@ -104,4 +104,15 @@ db.get_posts = ()=>{
     });
 }
 
+db.test = ()=>{
+    return new Promise((resolve, reject)=>{
+        pool.query('select * from test', (error, response)=>{
+            if(error)
+                return reject(error);
+            else
+                return resolve(response);
+        })
+    });
+}
+
 module.exports = db;
