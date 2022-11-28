@@ -4,7 +4,7 @@ const Stored_Procedures = require('./storedProcedures');
 
 
 const pool = createPool({
-    host : "13.231.206.11",
+    host : 'localhost',
     user : "root",
     password : "password",
     database : "fitnessapp",
